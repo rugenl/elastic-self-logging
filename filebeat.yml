@@ -119,8 +119,6 @@ setup.template.pattern: "filebeat-%{[beat.version]}*"
 # website.
 #setup.dashboards.url:
 
-
-{% if E_major == "7" %}
 #============================== Setup ILM =====================================
 setup.ilm.enabled: auto
 
@@ -141,7 +139,6 @@ setup.ilm.policy_name: "roll_daily_delete_30"
 # This allows to enable 6.7 migration aliases
 migration.6_to_7.enabled: true
 
-{% endif %}
 #============================== Kibana =====================================
 
 # Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
